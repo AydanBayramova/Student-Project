@@ -16,14 +16,14 @@ public class InMemoryStudentRepository implements StudentRepository {
 
     private List<StudentEntity> students = new ArrayList<>();
 
-  @PostConstruct
-    public void init() {
-        students.addAll(List.of(
-                new StudentEntity(1L, "Selen", 22, true, LocalDateTime.now(), null, null),
-                new StudentEntity(2L, "Vusal", 21, null, LocalDateTime.now(), null, null),
-                new StudentEntity(3L, "Beshir", 18, null, LocalDateTime.now(), null, null)
-        ));
-    }
+//  @PostConstruct
+//    public void init() {
+//        students.addAll(List.of(
+//                new StudentEntity(1L, "Selen", 22, true, LocalDateTime.now(), null, null),
+//                new StudentEntity(2L, "Vusal", 21, null, LocalDateTime.now(), null, null),
+//                new StudentEntity(3L, "Beshir", 18, null, LocalDateTime.now(), null, null)
+//        ));
+//    }
 
     @Override
     public StudentEntity save(StudentEntity student) {
