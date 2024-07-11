@@ -26,7 +26,6 @@ public class StudentServiceImpl implements StudentService {
         StudentEntity studentEntity = studentMapper.studentToEntity(student);
             studentEntity = studentRepository.save(studentEntity);
             return studentMapper.entityToDto(studentEntity);
-
     }
 
 
@@ -62,8 +61,8 @@ public class StudentServiceImpl implements StudentService {
             studentEntity.setGender(studentDto.getGender());
             studentEntity.setGrade(studentDto.getGrade());
             studentEntity.setUpdateDate(LocalDateTime.now());
-
-            return save(studentMapper.entityToDto(studentEntity));
+            return studentMapper.entityToDto(studentEntity);
+//            return save(studentMapper.entityToDto(studentEntity));
         } else {
             throw new RuntimeException();
         }
@@ -86,7 +85,7 @@ public class StudentServiceImpl implements StudentService {
             }
             studentEntity.setUpdateDate(LocalDateTime.now());
 
-            return save(studentMapper.entityToDto(studentEntity));
+            return studentMapper.entityToDto(studentEntity);
         } else {
             throw new RuntimeException();
         }
