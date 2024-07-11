@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @RequiredArgsConstructor
 public class StudentDto {
+
     private Long id;
     private String name;
     private Integer age;
@@ -18,5 +19,4 @@ public class StudentDto {
     private LocalDateTime createDate;
     private LocalDateTime updateDate;
     private Float grade;
-
 }
